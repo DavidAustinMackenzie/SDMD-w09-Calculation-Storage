@@ -52,11 +52,11 @@ class MainActivity : AppCompatActivity() {
         val pref = this.getSharedPreferences("file1",Context.MODE_PRIVATE) ?: return
 
         with (pref.edit()){
-            val number1 = findViewById<EditText>(R.id.number1)
-            val number2 = findViewById<EditText>(R.id.number2)
+            number1 = findViewById<EditText>(R.id.number1)
+            number2 = findViewById<EditText>(R.id.number2)
 
-            putString("num1", number1.text.toString())
-            putString("num2", number2.text.toString())
+            putString(getString(R.string.number1), number1.text.toString())
+            putString(getString(R.string.number2), number2.text.toString())
             apply()
 
         }
@@ -64,7 +64,10 @@ class MainActivity : AppCompatActivity() {
 
     //Get values from sharedPreferences
     private fun checkSharedPrefs(){
+        number1 = findViewById<EditText>(R.id.number1)
+        number2 = findViewById<EditText>(R.id.number2)
         val sharedPref = this.getSharedPreferences(getString(R.string.saved_numbers),
+
         Context.MODE_PRIVATE)
         sharedPref?.let{
             number1.setText(sharedPref.getString(getString(R.string.number1),""))
