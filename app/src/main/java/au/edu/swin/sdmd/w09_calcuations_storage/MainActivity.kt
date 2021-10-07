@@ -23,9 +23,12 @@ class MainActivity : AppCompatActivity() {
 
         //Check to see if Add or multiply is selected
         equals.setOnClickListener {
-            var result = if(radioAdd.isChecked){
+            var result = if(radioAdd.isChecked)
+            {
                 add(number1.text.toString(), number2.text.toString())
-            }else{
+            }
+            else
+            {
                 multiply(number1.text.toString(), number2.text.toString())
             }
 
