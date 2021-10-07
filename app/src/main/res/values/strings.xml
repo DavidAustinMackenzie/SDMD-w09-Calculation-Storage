@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">w09-Calculations-Storage</string>
     <string name="equals">equals</string>
+    <string name="number1">0</string>
+    <string name="number2">0</string>
+    <string name="saved_numbers">saved_numbers</string>
 </resources>
